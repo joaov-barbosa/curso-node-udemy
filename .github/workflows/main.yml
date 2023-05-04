@@ -13,6 +13,6 @@ jobs:
         - name: node
           run: npm install
         - name: set 
-          run: aws:credentials:config:dev
+          run: npm run aws:credentials:config:dev
         - name: ls
           run: aws ec2 describe-instances
