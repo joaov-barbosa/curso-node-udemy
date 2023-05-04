@@ -4,10 +4,10 @@ on:
 jobs:
     default:
         runs-on: ubuntu-latest
-        container:
-            image: node:18.0.0
+       
         steps:
-        
+        - name: install node
+          run: sudo apt-get install nodejs
         - name: Checkout
           uses: actions/checkout@v3
         - name: node
