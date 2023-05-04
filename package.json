@@ -1,5 +1,13 @@
 {
- "scripts": {
-   "aws:credentials:config:dev": "aws configure set aws_access_key_id $_AWS_KEY && aws configure set aws_secret_access_key $_AWS_SECRET"
- }
+  "name": "curso-node-udemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fs-sync.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "aws:credentials:config:dev": "aws configure set aws_access_key_id $_AWS_KEY && aws configure set aws_secret_access_key $_AWS_SECRET"
+  },
+  "author": "",
+  "license": "ISC"
 }
