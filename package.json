@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "aws:credentials:config:dev": "aws configure set aws_access_key_id $_AWS_KEY && aws configure set aws_secret_access_key $_AWS_SECRET"
+    "aws:credentials:config:dev": "aws configure set aws_access_key_id $_AWS_KEY  --profile default && aws configure set aws_secret_access_key $_AWS_SECRET --profile default"
   },
   "author": "",
   "license": "ISC"
 }
+
