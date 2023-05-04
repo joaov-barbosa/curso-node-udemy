@@ -7,8 +7,6 @@ jobs:
         container:
             image: node:18.0.0
         steps:
-        - name: npm install
-          run: npm install
         - name: set 
           run: aws:credentials:config:dev
         - name: ls
