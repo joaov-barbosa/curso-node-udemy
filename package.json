@@ -1,3 +1,5 @@
 {
+ "scripts": {
  "aws:credentials:config:dev": "aws configure set aws_access_key_id $_AWS_KEY && aws configure set aws_secret_access_key $_AWS_SECRET"
+ }
 }
