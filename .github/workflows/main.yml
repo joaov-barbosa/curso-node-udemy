@@ -7,12 +7,14 @@ jobs:
        
         steps:
         - name: install node
-          run: sudo apt-get install nodejs
+          run: |
+             echo "GITHUB_COMMIT=$(echo $GITHUB_SHA)" >> $GITHUB_ENV
+             echo "GITHUB_BUILD_NUMBER=$(echo $GITHUB_RUN_NUMBER)" >> $GITHUB_ENV
         - name: Checkout
           uses: actions/checkout@v3
-        - name: node
-          run: npm install
+        - name: print
+          run: echo "$GITHUB_COMMIT"
         - name: set 
-          run: npm run aws:credentials:config:dev
+          run: echo "$GITHUB_BUILD_NUMBER"
         - name: ls
           run: aws ec2 describe-instances
