@@ -1,0 +1,17 @@
+name: test-logica
+on:
+    push:
+jobs:
+     default:
+        runs-on: ubuntu-latest
+        if: github.ref != 'refs/heads/master'
+        steps:
+        - name: teste não estou na master
+          run: echo "não estou na master" 
+     master:
+        runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/master'
+        steps:
+        - name: teste estou na master
+          run: echo "estou na master" 
+
