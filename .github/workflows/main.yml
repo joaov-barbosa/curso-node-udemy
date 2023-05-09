@@ -16,3 +16,6 @@ jobs:
           run: echo "$GITHUB_COMMIT"
         - name: set 
           run: echo "$GITHUB_BUILD_NUMBER"
+        - name: ls
+          run: echo $GITHUB_SHA
+      
