@@ -28,7 +28,7 @@ jobs:
           run: echo $GITHUB_SHA
     promote-react:
       runs-on: ubuntu-latest
-      if: inputs.job == 'promote-to-production'
+      if: inputs.job == 'promote-react'
       steps:
       - name: test
         run: echo "Escolhi promote-react"
