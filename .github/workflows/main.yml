@@ -31,6 +31,6 @@ jobs:
       if: inputs.job == 'promote-react'
       steps:
       - name: test
-        run: echo "Escolhi promote-react"
+        run: echo "$GITHUB_RUN_NUMBER"
 
       
