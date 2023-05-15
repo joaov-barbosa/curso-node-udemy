@@ -1,6 +1,6 @@
 name: test-logica
 on:
-    push:
+  workflow_dispatch:
 jobs:
      default:
         runs-on: ubuntu-latest
