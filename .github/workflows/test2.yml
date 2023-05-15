@@ -1,4 +1,4 @@
-name: test-logica
+name: test-logica2
 on:
   workflow_dispatch:
 jobs:
