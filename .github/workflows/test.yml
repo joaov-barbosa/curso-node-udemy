@@ -34,14 +34,6 @@ jobs:
       runs-on: ubuntu-latest
       if: inputs.ambiente == 'deploy-to-production'
       steps:
-      - name: stg
-<<<<<<< HEAD
-        run: echo "estou na prd" 
-
-
-
-    
-
-=======
-        run: echo "estou na prd" 
->>>>>>> dev
+      - name: prd
+        run: echo "estou na prd
+      
