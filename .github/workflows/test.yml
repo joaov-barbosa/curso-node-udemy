@@ -35,5 +35,5 @@ jobs:
       if: inputs.ambiente == 'deploy-to-production'
       steps:
       - name: prd
-        run: echo "estou na prd
+        run: echo "estou na prd"
       
