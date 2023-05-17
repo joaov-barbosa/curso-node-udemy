@@ -14,13 +14,13 @@ on:
 jobs:
      default:
         runs-on: ubuntu-latest
-        if: github.ref != 'refs/heads/master'
+        if: github.ref != 'refs/heads/master' && github.event_name == 'push'
         steps:
         - name: teste não estou na master
           run: echo "não estou na master" 
      master:
         runs-on: ubuntu-latest
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         steps:
         - name: teste estou na master
           run: echo "estou na master" 
@@ -35,9 +35,13 @@ jobs:
       if: inputs.ambiente == 'deploy-to-production'
       steps:
       - name: stg
+<<<<<<< HEAD
         run: echo "estou na prd" 
 
 
 
     
 
+=======
+        run: echo "estou na prd" 
+>>>>>>> dev
