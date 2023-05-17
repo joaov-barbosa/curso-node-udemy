@@ -1,6 +1,16 @@
 name: test-logica
 on:
   workflow_dispatch:
+    inputs:
+      ambiente:
+        description: 'realizar deploy em qual ambiente?'
+        required: true
+        type: choice
+        options:
+          - deploy-to-staging
+          - deploy-to-production
+  push:
+
 jobs:
      default:
         runs-on: ubuntu-latest
@@ -14,4 +24,15 @@ jobs:
         steps:
         - name: teste estou na master
           run: echo "estou na master" 
-
+     stg:
+      runs-on: ubuntu-latest
+      if: inputs.ambiente == 'deploy-to-staging'
+      steps:
+      - name: stg
+        run: echo "estou na stg" 
+     prd:
+      runs-on: ubuntu-latest
+      if: inputs.ambiente == 'deploy-to-production'
+      steps:
+      - name: stg
+        run: echo "estou na prd" 
